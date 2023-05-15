@@ -1,0 +1,24 @@
+<div id="container">
+    <img [src]="config.imgTitle" alt="">
+    <form [formGroup]="form" (ngSubmit)="submit(form.value)">
+        <div class="containerInput">
+            <div><app-input [formInstance]="form" [controlName]="'email'" [configInput]="config.inputEmail.type"
+                    [placeholder]="config.inputEmail.placeholder.text"
+                    [style]="config.inputEmail.placeholder.style"></app-input>
+            </div>
+            <app-input [formInstance]="form" [controlName]="'password'" [configInput]="config.inputPassword.type"
+                [placeholder]="config.inputPassword.placeholder.text">
+                [style]="config.inputPassword.placeholder.style"
+            </app-input>
+        </div>
+        <div class="error" *ngIf="form.errors && form.errors['userLogin']">Username o password errati </div>
+        <div class="insert">
+            <app-button [title]="config.button.text"
+                [style]="form.invalid ? config.button.inactive : config.button.active" [disabled]="form.invalid"
+                [type]="'submit'"></app-button>
+            <app-footerbutton [text]="configFooterButton.text.login"
+                [link]="configFooterButton.link"></app-footerbutton>
+        </div>
+    </form>
+    <img [src]="config.imgFooter" alt="">
+</div>

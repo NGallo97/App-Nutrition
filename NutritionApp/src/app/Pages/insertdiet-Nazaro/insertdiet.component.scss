@@ -1,0 +1,33 @@
+#containerForm {
+    width: 100%;
+    height: 100%;
+    padding: 35px;
+
+    .accordion {
+        width: 99%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.241);
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+        overflow: auto;
+
+        .accordionInternal {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+
+            >* {
+                margin-bottom: 20px;
+            }
+
+            .containerQTAUM {
+                display: flex;
+                width: 100%;
+                justify-content: space-around;
+            }
+        }
+    }
+
+}

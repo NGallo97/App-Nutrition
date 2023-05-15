@@ -1,0 +1,41 @@
+#card {
+  width: 90vw;
+  height: 12vh;
+  background: #9e9bc7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 24px;
+  gap: 1rem;
+  font-family: "Signika";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  .text {
+    color: white;
+    width: 138px;
+    height: 75px;
+    font-family: "Signika";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    /* or 139% */
+    padding-left: 30px;
+    // color: #ffffff;
+  }
+  .internalCard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 140px;
+    height: 12vh;
+    background: #a3a0ca;
+    border-bottom-left-radius: 100px !important;
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 24px;
+    z-index: 10;
+    margin-left: auto;
+  }
+}

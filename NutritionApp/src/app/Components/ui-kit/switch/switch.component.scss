@@ -1,0 +1,73 @@
+#containerSwitch {
+  width: 95vw;
+  height: 90vh;
+  overflow-x: hidden;
+  padding: 30px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .title {
+    padding-bottom: 20px;
+    font-family: "Abel";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    /* identical to box height, or 133% */
+
+    text-align: center;
+    letter-spacing: 0.05em;
+
+    /* Typography/heading-main */
+
+    color: #0d0d0d;
+  }
+
+  .button {
+    width: 50%;
+    height: 48px;
+    background: #fff8ee;
+    border-radius: 16px;
+    border: none;
+    margin-bottom: 30px;
+
+    &.active {
+      background: #ff9385;
+    }
+
+    &:first-child {
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+    }
+
+    &:last-child {
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px;
+    }
+  }
+
+  .containerPasto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .pasto {
+      display: flex;
+      width: 57vw;
+      margin-right: 35px;
+    }
+  }
+
+  .containerInternalCard {
+    display: flex;
+
+    .img {
+      width: 100px;
+      height: 100px;
+      margin-right: 25px;
+    }
+  }
+
+
+}

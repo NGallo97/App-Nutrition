@@ -1,0 +1,14 @@
+<div id="containerAccordion">
+    <form>
+        <div class="containerTitle" (click)="toggleAccordion()">
+            <app-title [titleSection]="title"></app-title>
+            <div class="arrow" [ngClass]="
+            isSelected ? '' : 'arrowInverse'
+        "><app-image [svg]="arrow"></app-image></div>
+        </div>
+        <div *ngIf="isSelected">
+            <ng-content>
+            </ng-content>
+        </div>
+    </form>
+</div>

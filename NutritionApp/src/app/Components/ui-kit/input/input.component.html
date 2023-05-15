@@ -1,0 +1,13 @@
+<div id="container" [formGroup]="formInstance" [ngStyle]="style">
+    <input class="input" autocomplete="on" [formControlName]="controlName" [type]="configInput"
+        [placeholder]="placeholder" [textContent]="error">
+</div>
+
+
+<!-- <ng-container *ngFor="let f of formInstance.get(controlName)?.errors | keyvalue ">
+    <div class="alert">
+        <div *ngIf="
+        formInstance.get(controlName)?.touched">
+            {{errorConfig[f.key]}}</div>
+    </div>
+</ng-container> -->

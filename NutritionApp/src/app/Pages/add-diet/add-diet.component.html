@@ -1,0 +1,9 @@
+<div id="containerCreateDiet">
+    <div class="contiainerInt">
+        <app-title class="title" [titlePage]="'Nessuna dieta impostata'"></app-title>
+        <app-description class="description" [text]="'Crea una nuova dieta'"></app-description>
+        <div (click)="navigateTo('creationDiet')" class="containerButton">
+            <img [src]="create" alt="">
+        </div>
+    </div>
+</div>

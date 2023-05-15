@@ -1,0 +1,51 @@
+#containerCreationDiet {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .containerForm {
+        width: 100%;
+        height: 100vh;
+        padding: 100px 0px 0px 0px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .containerInput {
+            width: auto;
+            height: 189px;
+            width: 95%;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+
+            .containerIntInput {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                .text {
+                    font-family: 'Signika';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 22px;
+                    line-height: 31px;
+                    letter-spacing: -0.24px;
+                    align-self: center;
+                }
+            }
+        }
+
+        .containerButton {
+            display: flex;
+            padding: 20px 0px 20px 0px;
+            width: 95%;
+            border-top: 1px solid rgba(128, 128, 128, 0.112);
+            justify-content: space-around;
+            align-items: center;
+        }
+    }
+}

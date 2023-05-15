@@ -1,0 +1,24 @@
+.custom-dots {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-top: 1rem;
+    margin-right: 15%;
+    margin-bottom: 1rem;
+    margin-left: 15%;
+
+    .rectangle {
+        width: 12px;
+        height: 10px;
+    }
+
+    .active {
+        width: 20px;
+        height: 10px;
+    }
+}

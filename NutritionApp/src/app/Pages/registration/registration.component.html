@@ -1,0 +1,81 @@
+<div id="containerRegister">
+    <form [formGroup]="form" (ngSubmit)="submit(form.value)">
+        <div class="imgTitle"><img [src]="config.imgTitle"></div>
+        <div class="containerForm">
+
+            <div>
+                <app-input class="input" [formInstance]="form" [controlName]="'name'"
+                    [configInput]="config.inputName.type" [placeholder]="config.inputName.placeholder.text"
+                    [style]="config.style">
+                </app-input>
+                <label class="error" *ngIf="name?.invalid && 
+            name?.touched && 
+            name!.errors && 
+            name!.errors['required']">
+                    Il campo è obbligatorio</label>
+            </div>
+
+
+            <div>
+                <app-input class="input" [formInstance]="form" [controlName]="'surname'"
+                    [configInput]="config.inputSurname.type" [placeholder]="config.inputSurname.placeholder.text"
+                    [style]="config.style"></app-input>
+
+                <div class="error" *ngIf="surname?.invalid &&
+                 surname?.touched &&
+                 surname!.errors &&
+                surname!.errors['required']">
+                    Il campo è obbligatorio</div>
+            </div>
+
+            <div>
+                <app-input class="input" [formInstance]="form" [controlName]="'email'"
+                    [configInput]="config.inputEmail.type" [placeholder]="config.inputEmail.placeholder.text"
+                    [style]="config.style"></app-input>
+
+                <div class="error" *ngIf="email?.invalid && 
+            email?.touched && 
+            email!.errors && 
+            email!.errors['required']">
+                    Il campo è obbligatorio</div>
+            </div>
+
+            <div>
+                <app-input class="input" [formInstance]="form" [controlName]="'password'"
+                    [configInput]="config.inputPassword.type" [placeholder]="config.inputPassword.placeholder.text"
+                    [style]="config.style"></app-input>
+
+                <div class="error" *ngIf="password?.invalid &&
+                 password?.touched && 
+                 password!.errors && 
+                 password!.errors['required']">
+                    Inserire una password</div>
+            </div>
+
+            <div>
+                <app-input class="input" [formInstance]="form" [controlName]="'confirmPassword'"
+                    [configInput]="config.inputConfirmPassword.type"
+                    [placeholder]="config.inputConfirmPassword.placeholder.text" [style]="config.style"></app-input>
+
+                <div class="error" *ngIf="confirmPassword?.invalid &&
+                 confirmPassword?.touched &&
+                  confirmPassword!.errors &&
+                   confirmPassword!.errors['required']">
+                    Inserire una password</div>
+            </div>
+
+            <div class="containerRegistration">
+                <app-button class="button" [style]="form.invalid" [type]="'submit'" [disabled]="form.invalid"
+                    [title]="config.button.text"
+                    [style]="form.invalid ? config.button.inactive : config.button.active  "></app-button>
+                <app-footerbutton class="footerButton" [text]="configFooterButton.text.registration" click=""
+                    [link]="configFooterButton.link" (click)="navigationTo('login')"></app-footerbutton>
+            </div>
+            <div class="img">
+                <img [src]="config.imgFooter" alt="">
+            </div>
+        </div>
+    </form>
+    <div>{{message}}</div>
+    <div class="error">{{errorMessage}}</div>
+</div>

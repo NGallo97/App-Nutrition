@@ -1,0 +1,51 @@
+<div id="containerSwitch">
+  <app-title [titlePage]="'Preferiti'" class="title"></app-title>
+  <div>
+    <button class="button" [class.active]="c.active" (click)="toggle(c)" *ngFor="let c of days">
+      {{ c.day }}
+    </button>
+  </div>
+  <ng-container *ngFor="let conf of config.days, let i = index">
+    <ng-container *ngIf="i+1 === currentDay">
+      <ng-container *ngFor="let pasto of conf.giorno">
+        <app-card [style]="{
+          width: '90vw',
+        height: '16vh',
+        background: '#EFF7EE',
+        display: 'flex',
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        flexDirection: 'row',
+        marginBottom: '30px',
+        bordeRadius: '24px',
+        fontFamily: 'Signika',
+        fontStyle: 'normal',
+        fontWeight: '600',
+        fontSize: '14px',
+        lineHeight: '25px',}">
+
+          <div class="containerInternalCard">
+            <div>
+              <img class="img" [src]="pasto.image" alt="">
+            </div>
+            <div class="containerPasto">
+              <div class="pasto">{{dietType[pasto.type]}}</div>
+              <ng-container *ngFor=" let singoloPasto of pasto.items">
+                <div class="pasto">
+                  <div>{{singoloPasto.title}}: <span>{{singoloPasto.qta}}</span> </div>
+
+                  <div> <span>{{singoloPasto.um}}</span></div>
+                </div>
+
+              </ng-container>
+            </div>
+          </div>
+        </app-card>
+
+      </ng-container>
+
+    </ng-container>
+
+  </ng-container>
+
+</div>

@@ -1,0 +1,15 @@
+<div id="containerList" *ngFor="let l of listItem">
+  <div class="containerInternal">
+    <div class="rectangle">
+      <app-image [image]="l.icon" class="icon"></app-image>
+    </div>
+    <div class="option">
+      <div>
+        <app-description (click)="l.callback? l.callback() : null" [text]="l.section"
+          class="descriptionMenu"></app-description>
+      </div>
+      <div><app-image [image]="l.arrow" (click)="l.callback? l.callback() : null"></app-image></div>
+    </div>
+  </div>
+</div>
+<img [src]="line" class="line" />

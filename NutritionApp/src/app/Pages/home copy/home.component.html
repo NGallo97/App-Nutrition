@@ -1,0 +1,47 @@
+<!-- <div id="homePage">
+  <div>
+    <app-title class="title" [title]="nome"></app-title>
+    <app-description class="text" [text]="'Cerca, traccia e mangia cibo sano.'"></app-description>
+  </div>
+  <ng-template #carouselItem let-item="c">
+    <ng-container>
+      <div id="carouselHome">
+        <div class="containerInt">
+          <app-title [titlePage]="item.title" class="titleCarousel"></app-title>
+          <app-description [text]="item.description" class="descriptionCarousel"></app-description>
+          <app-button [title]="item.buttonDescription" [style]="item.style" [icon]="item.buttonImg"
+            class="button"></app-button>
+        </div>
+        <div class="imgCarousel">
+          <img [src]="item.imgUrl" alt="" />
+        </div>
+      </div>
+    </ng-container>
+  </ng-template>
+  <div>
+    <ng-container>
+      <app-carousel *ngIf="config" [carouselConfig]="config"></app-carousel>
+    </ng-container>
+  </div>
+  <app-card [isCard]="false" [textDescription]="'Vedi i tuoi progressi settimanali'">
+    <app-button [title]="buttonConfig.title" [style]="buttonConfig.style"
+      [icon]="buttonConfig.imgUrl"></app-button></app-card>
+  <app-title [titlePage]="'Scegli i tuoi cibi preferiti'" [style]="{
+    width: 'auto',
+    marginRight: 'auto',
+    paddingBottom: '10px',
+    fontFamily: 'Signika',
+    fontStyle: 'normal',
+    fontWeight: '400',
+    fontSize: '22px',
+    lineHeight: '20px',
+    letterSpacing: '-0.24px',
+
+  }
+  "></app-title>
+  <div class="cardScroll">
+    <ng-container *ngFor="let c of cardConfig.card">
+      <app-card [isCard]="true" [svg]="c.imgUrl" [textDescription]="c.description" [style]="c.style"></app-card>
+    </ng-container>
+  </div>
+</div> -->

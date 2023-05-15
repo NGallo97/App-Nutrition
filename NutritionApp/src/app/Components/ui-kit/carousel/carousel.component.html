@@ -1,0 +1,16 @@
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="item">
+      <div class="carousel-item" [class.active]="i === 0" *ngFor="let c of carouselConfig?.slides; let i = index">
+        <ng-container *ngIf="c.component" [ngTemplateOutlet]="c.component" [ngTemplateOutletContext]="{ c }">
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+  <app-dots [dotsLenght]="carouselConfig?.slides?.length ?? 0" class="mt-1"></app-dots>
+</div>

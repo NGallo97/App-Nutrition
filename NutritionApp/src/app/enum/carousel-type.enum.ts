@@ -1,0 +1,4 @@
+export enum CarouselType {
+  WELCOME_CAROUSEL = 'WELCOME_CAROUSEL',
+  HOME_CAROUSEL = 'HOME_CAROUSEL',
+}

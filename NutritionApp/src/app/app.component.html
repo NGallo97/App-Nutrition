@@ -1,0 +1,9 @@
+<div class="container h-100">
+  <router-outlet></router-outlet>
+  <app-footer *ngIf="
+    router.url !== '/' &&
+    router.url !== '/login' &&
+       router.url !== '/insertDiet' &&
+        router.url !== '/creationDiet' &&
+         (authservice.subject | async)" [config]="configFooter" class="footer"></app-footer>
+</div>

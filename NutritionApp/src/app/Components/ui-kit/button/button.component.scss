@@ -1,0 +1,47 @@
+#button {
+  width: 290px;
+  height: 72px;
+  background: #91c788;
+  border-radius: 24px;
+  border: none;
+  color: white;
+
+  &:active {
+    box-sizing: border-box;
+    width: 290px;
+    height: 72px;
+    background: #91c788;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 24px;
+  }
+
+  &.disabled {
+    box-sizing: border-box;
+    margin-right: 5px;
+    width: 290px;
+    height: 72px;
+    background: gray;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 24px;
+  }
+
+}
+
+
+
+.text {
+  width: 66px;
+  height: 31px;
+
+  font-family: "Signika";
+  font-style: normal;
+  font-weight: 600;
+  // font-size: 25px;
+  line-height: 31px;
+  /* identical to box height */
+
+  letter-spacing: 0.05em;
+
+  // color: #ffffff;
+}

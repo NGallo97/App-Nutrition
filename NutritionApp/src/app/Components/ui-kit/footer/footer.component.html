@@ -1,0 +1,11 @@
+<div id="footer">
+  <div routerLinkActive="active" *ngFor="let c of config">
+    <div
+      routerLink="{{ c.path }}"
+      routerLinkActive="active"
+      #rla="routerLinkActive"
+    >
+      <img src="{{ rla.isActive ? c.activeImgUrl : c.imgUrl }}" alt="" />
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div id="welcomePage">
+  <app-title class="kcal" [image]="kcal"> </app-title>
+  <div class="d-flex align-items-center justify-content-center flex-column">
+  </div>
+  <app-carousel class="h-auto" *ngIf="config" [carouselConfig]="config"> </app-carousel>
+  <ng-template #carouselItem let-item="c" class="slider">
+    <ng-container>
+      <app-image class="img" [svg]="item.imgUrl" alt="" />
+      <app-title [titlePage]="item.title" class="title"></app-title>
+      <app-description [text]="item.description" class="description"></app-description>
+    </ng-container>
+  </ng-template>
+  <div class="text-center">
+    <app-button (click)="navigationTo('login')" [title]="configButton.title" [style]="configButton.style"> </app-button>
+    <div class="pt-3">
+    </div>
+    <registration></registration>
+  </div>
+</div>

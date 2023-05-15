@@ -1,0 +1,22 @@
+<div id="containerCreationDiet">
+    <form [formGroup]="form" (ngSubmit)="submit(form.value)" class="containerForm">
+        <div class="containerInput">
+            <div class="containerIntInput">
+                <app-description class="text" [text]="'Quando inizierà la tua dieta?'"></app-description>
+                <app-input [formInstance]="form" [configInput]="config.typeDate" [controlName]="'date'"></app-input>
+            </div>
+            <div class="containerIntInput">
+                <app-description class="text" [text]="'Quanti giorni dura la tua dieta?'"></app-description>
+                <app-input [formInstance]="form" [configInput]="config.typeNumber" [controlName]="'lengthDiet'"
+                    [placeholder]="'Inserisci un numero'"></app-input>
+            </div>
+        </div>
+        <div class="containerButton">
+            <app-button [title]="button.buttonUndo.text" [style]="button.buttonUndo.style"
+                [type]="button.buttonUndo.reset" (click)="resetForm()"></app-button>
+            <app-button [title]="button.buttonInsert.text"
+                [style]="form.invalid ? button.buttonInsert.styleInactive : button.buttonInsert.styleActive"
+                [type]="button.buttonInsert.submit" [disabled]="form.invalid"></app-button>
+        </div>
+    </form>
+</div>

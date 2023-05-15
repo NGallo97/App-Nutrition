@@ -1,0 +1,41 @@
+.img {
+  width: 92vw;
+}
+
+.title {
+  font-family: "Signika";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 35px;
+  text-align: center;
+  letter-spacing: -0.24px;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.description {
+  font-family: "Signika";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 24px;
+  /* or 140% */
+
+  text-align: center;
+  letter-spacing: -0.24px;
+
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.homeCarousel {
+  display: flex;
+  flex-direction: row;
+
+  .hamburger {
+    position: absolute;
+    left: 54.4%;
+    right: 15.89%;
+    top: 24.26%;
+    bottom: 60.87%;
+  }
+}

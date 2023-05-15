@@ -1,0 +1,105 @@
+#homePage {
+  display: flex;
+  width: 100%;
+  height: 95%;
+  padding: 28px 15px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+
+  .title {
+    width: 253px;
+    height: 59px;
+    font-family: "Signika";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: -0.24px;
+    color: #91c788;
+    ;
+  }
+
+  .text {
+    width: 253px;
+    height: 59px;
+    font-family: "Signika";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: -0.24px;
+    color: #7b7b7b;
+  }
+
+  #carouselHome {
+    width: 90vw;
+    height: 22vh;
+    background: linear-gradient(106.1deg,
+        rgba(255, 242, 240, 0.5) -103.48%,
+        #fff8eb 104.24%);
+    border-radius: 32px;
+    transform: rotate(-0.01deg);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    .containerInt {
+      display: flex;
+      height: auto;
+      flex-direction: column;
+
+      .titleCarousel {
+        font-family: "Signika";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 10px;
+        line-height: 14px;
+        /* identical to box height, or 140% */
+
+        letter-spacing: -0.24px;
+
+        color: #ff806e;
+
+        transform: rotate(-0.01deg);
+      }
+
+      .descriptionCarousel {
+        width: 120px;
+        font-family: "Signika";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 17px;
+        line-height: 24px;
+        margin-bottom: 8px;
+        /* or 140% */
+
+        letter-spacing: -0.24px;
+
+        color: #330600;
+
+        transform: rotate(-0.01deg);
+      }
+    }
+
+    .button {
+      display: flex;
+    }
+  }
+
+  .cardScroll {
+    width: 100%;
+    display: flex;
+    overflow-x: scroll;
+    gap: 1rem;
+    padding-bottom: 25px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
