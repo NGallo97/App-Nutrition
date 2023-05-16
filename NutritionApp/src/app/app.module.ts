@@ -36,7 +36,8 @@ import { ModifyProfilePage } from './Pages/modifyprofile/modifyprofile.component
 import { ModifyDietPage } from './Pages/modifydiet/modifydiet.component';
 import { SettingsPage } from './Pages/settings/settings.component';
 import { PrivacyPolicyPage } from './Pages/privacypolicy/privacypolicy.component';
-import { InsertDietPage } from './Pages/insertdietCopy/insertdiet.component';
+import { InsertDietPage } from './Pages/insertdiet/insertdiet.component';
+
 @NgModule({
   declarations: [
     AppComponent,

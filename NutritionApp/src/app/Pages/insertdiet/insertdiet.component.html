@@ -1,7 +1,29 @@
-<!-- <form [formGroup]="form" (ngSubmit)="submit(form)" id="containerForm">
-    <ng-container *ngIf="dietArray.length>0">
-        <app-accordion *ngFor="let d of dietArray, let i = index" [title]="'Giorno '+(i+1)" class="accordion">
-            <div *ngFor="let pasto of getFormArray(i), let id = index" [formArrayName]="i.toString()"
+
+    <ng-container *ngIf="days?.length>0">
+        <app-accordion *ngFor="let d of days, let i = index" [title]="'Giorno '+(i+1)" class="accordion">
+            <form class="basic-container" [formGroup]="form" (ngSubmit)="submit(form)" id="containerForm">
+                <div [formArrayName]="i">
+                <div class="row" *ngFor="let p of getFormArray(i); let in = index"
+                    [formGroupName]="in">
+                    <!-- <input type="text" formControlName ='description' >
+                    <input type="text" formControlName ='qta' >
+                    <input type="text" formControlName ='um' > -->
+                    <app-input [formInstance]="getFormGroupInstance(in)" [controlName]="'description'"
+                        [placeholder]="'Descrizione'"></app-input>
+                    <div class="containerQTAUM">
+                        <app-input [style]="{
+                        width: '30vw'
+                    }" [formInstance]="getFormGroupInstance(in)" [controlName]="'qta'" [placeholder]="'Quantità'"></app-input>
+                        <app-input [formInstance]="getFormGroupInstance(in)" [controlName]="'um'"
+                            [placeholder]="'Unità di misura'"></app-input>
+                    </div>
+                    <app-button
+                        [style]="form.invalid ? button.buttonInsert.styleInactive :  button.buttonInsert.styleActive"
+                        [title]="button.buttonInsert.text" (click)="addPasto(in)"></app-button>
+                    </div>
+                </div>
+                </form>
+            <!-- <div *ngFor="let pasto of getFormArray(i), let id = index" [formArrayName]="pasti"
                 class="accordionInternal">
                 <div [formGroupName]="id">
                     <app-input [formInstance]="form" [controlName]="'description'"
@@ -17,7 +39,6 @@
                         [style]="form.invalid ? button.buttonInsert.styleInactive :  button.buttonInsert.styleActive"
                         [title]="button.buttonInsert.text" [type]="'submit'"></app-button>
                 </div>
-            </div>
+            </div> -->
         </app-accordion>
     </ng-container>
-</form> -->
